@@ -20,8 +20,8 @@ Al final de la partida se sumarán los puntos ganados en cada ronda se dará el 
 Indicaciones:
 *Al inicio de cada partida el jugador cuenta con 10 pts
 * Tipos de armas y sus pts:
-    *Cañon de plasma: 5pts
-    *Bomba: 4pts
-    *Espada 3pts
-    *Gancho 2pts
-    *Llave espada 1pto    
+    **Cañon de plasma: 5pts
+    **Bomba: 4pts
+    **Espada 3pts
+    **Gancho 2pts
+    **Llave espada 1pto    
