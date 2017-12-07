@@ -44,16 +44,26 @@ public class JuegoUI {
 		case 1:
 			crearJugador();	
 			break;
-		
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			return true;
 		}
 		return false;
 	}
+	
 	private static void crearJugador() throws IOException {
 		String nombre;
 		System.out.println("Nombre del jugador");
 		nombre = in.readLine();
 		if(nombre!=null) {
 		handler.crearJugador(nombre);
+		}else {
+			System.out.println("Pal doggy");
 		}
 	}
 
