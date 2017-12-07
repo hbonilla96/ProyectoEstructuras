@@ -1,19 +1,17 @@
 package com.juego.main;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-
-import com.juego.estructuras.*;
-import com.juego.logic.Gestor;
+import com.juego.logic.GestorJuego;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class JuegoUI {
-
-	private static DataInputStream in = new DataInputStream(System.in); 
-	private static Gestor handler;
+	private static final int contJugadores = 2;
+	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	private static GestorJuego handler = new GestorJuego();
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		
 		int opcion = 0;
         boolean salir = true;
@@ -35,20 +33,21 @@ public class JuegoUI {
         System.out.println("");
 	}
 
-	private static int leerOpcionDelMenu() throws IOException{
-        return Integer.parseInt(in.readLine()); 
+	private static int leerOpcionDelMenu() throws Exception{
+        return Integer.parseInt(br.readLine()); 
 	}
 	
-	private static boolean ejecutarAccionDelMenu(int opcion)throws IOException {
+	private static boolean ejecutarAccionDelMenu(int opcion)throws Exception {
 		switch(opcion) {
 		case 1:
-			crearJugador();	
+			crearJugadores();	
 			break;
 		case 2:
 			break;
 		case 3:
 			break;
 		case 4:
+			handler.listarJugadores();
 			break;
 		case 5:
 			return true;
@@ -56,15 +55,12 @@ public class JuegoUI {
 		return false;
 	}
 	
-	private static void crearJugador() throws IOException {
-		String nombre;
-		System.out.println("Nombre del jugador");
-		nombre = in.readLine();
-		if(nombre!=null) {
-		handler.crearJugador(nombre);
-		}else {
-			System.out.println("Pal doggy");
+	private static void crearJugadores() throws Exception {
+		for(int i=0;i<contJugadores;i++){
+			System.out.println("Nombre del jugador");
+			String nombre = br.readLine();
+			handler.crearJugador(nombre);
+			}
 		}
-	}
-
+	
 }
