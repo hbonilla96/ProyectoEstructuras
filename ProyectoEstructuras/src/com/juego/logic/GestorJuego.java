@@ -19,4 +19,7 @@ public class GestorJuego {
 	public void listarJugadores() {
 		listJugadores.listar();
 	}
+	public void IniciarPartida() {
+		
+	}
 }
