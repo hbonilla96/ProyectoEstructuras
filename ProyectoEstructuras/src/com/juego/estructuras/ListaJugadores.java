@@ -1,5 +1,7 @@
 package com.juego.estructuras;
 
+import com.juego.clases.Personaje;
+
 public class ListaJugadores {
 	private Nodo inicio;
 	private int tamanno;
@@ -33,9 +35,9 @@ public class ListaJugadores {
         tamanno++;
     }
 	
-	public void agregarAlInicio(String valor){
+	public void agregarAlInicio(Personaje valor){
         Nodo nuevo = new Nodo();
-        nuevo.setValor(valor);
+        nuevo.setValor(valor.getNombre());
         
         if (esVacia()) {
             inicio = nuevo;
