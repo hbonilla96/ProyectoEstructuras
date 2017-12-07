@@ -4,8 +4,8 @@ public class Nodo {
 	private String valor;
 	private Nodo siguiente;
 	
-	public void Nodo(){
-		this.valor = "";
+	public void Nodo(String nombre){
+		this.valor = nombre;
 		this.siguiente = null;
 	}
 	
