@@ -5,5 +5,5 @@ public enum CategoriaArma {
 	Bomba,
 	Espada,
 	Gancho,
-	LlaveEspada;
+	LlaveEspada
 }

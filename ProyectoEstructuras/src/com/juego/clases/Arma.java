@@ -3,12 +3,22 @@ package com.juego.clases;
 public class Arma {
 	protected CategoriaArma tipo;
 	protected int daño;
+	protected Arma siguiente;
 	
 	public Arma(CategoriaArma type) {
 		this.tipo = type;
 	}
+	public Arma() {
+		
+	}
 	
 	
+	public Arma getSiguiente() {
+		return siguiente;
+	}
+	public void setSiguiente(Arma siguiente) {
+		this.siguiente = siguiente;
+	}
 	public CategoriaArma getTipo() {
 		return tipo;
 	}

@@ -7,4 +7,9 @@ public class Bomba extends Arma {
 		this.daño = 3;
 	}
 
+	@Override
+	public String toString() {
+		return "Bomba [tipo=" + tipo + ", daño=" + daño + "]";
+	}
+
 }

@@ -1,13 +1,14 @@
 package com.juego.main;
 
 import java.io.BufferedReader;
-import com.juego.logic.GestorJuego;
 
-import java.io.IOException;
+import com.juego.clases.CategoriaArma;
+import com.juego.logic.GestorJuego;
 import java.io.InputStreamReader;
 
 public class JuegoUI {
 	private static final int contJugadores = 2;
+	private static final int contArmas = 4;
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	private static GestorJuego handler = new GestorJuego();
 	
@@ -61,6 +62,31 @@ public class JuegoUI {
 			String nombre = br.readLine();
 			handler.crearJugador(nombre);
 			}
+	}
+	private static void mostrarMenuArmas() {
+		System.out.println("Armas");
+        System.out.println("Puede elegir 4, sino se le asigna una por defecto");
+        System.out.println("1. CanionPlasma");
+        System.out.println("2. Bomba");
+        System.out.println("3. Espada Gancho");
+        System.out.println("5. Llave Espada");
+        System.out.println("6. Salir.");
+	}
+	private static void elegirArmas()throws Exception {
+	 int opcion,cont=1;
+		while(cont<=contArmas) {
+			mostrarMenuArmas();
+			opcion = leerOpcionDelMenu();
+			if(esOpcionValida(opcion)) {
+				handler.elegirArmas(CategoriaArma.values()[opcion-1]);
+				cont++;
+			}else {
+				System.out.println("Opcion invalida");
+			}
 		}
+	}
+	private static boolean esOpcionValida(int opcion) {
+		return opcion > 0 && opcion < 5;
+	}
 	
 }

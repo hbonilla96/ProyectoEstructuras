@@ -1,23 +1,38 @@
 package com.juego.clases;
 
+import java.util.LinkedList;
+import java.util.Stack;
+
+import com.juego.estructuras.PilaAtaques;
+
 public class Jugador {
 	String nombre;
 	int vida = 10;
-	public Jugador(String nombre, int puntos) {
+	PilaAtaques ataques;
+	
+	public Jugador(String nombre) {
 		super();
 		this.nombre = nombre;
-		this.vida = puntos;
 	}
+	
+	public PilaAtaques getAtaques() {
+		return ataques;
+	}
+
+	public void setAtaques(PilaAtaques ataques) {
+		this.ataques = ataques;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getPuntos() {
+	public int getVida() {
 		return vida;
 	}
-	public void setPuntos(int vida) {
+	public void setVida(int vida) {
 		this.vida = vida;
 	}
 	@Override
