@@ -2,7 +2,6 @@ package com.juego.main;
 
 import java.io.BufferedReader;
 
-import com.juego.clases.Guerrero;
 import com.juego.logic.GestorJuego;
 
 import java.io.IOException;

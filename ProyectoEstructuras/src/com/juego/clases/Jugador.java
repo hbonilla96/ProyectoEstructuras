@@ -3,10 +3,9 @@ package com.juego.clases;
 public class Jugador {
 	String nombre;
 	int vida = 10;
-	public Jugador(String nombre, int puntos) {
+	public Jugador(String nombre) {
 		super();
 		this.nombre = nombre;
-		this.vida = puntos;
 	}
 	public String getNombre() {
 		return nombre;
