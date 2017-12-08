@@ -66,26 +66,5 @@ public class JuegoUI {
 			}
 		}
 	
-	private static void listarGuerreros() {
-		ArrayList<Guerrero> guerreros= GestorJuego.listarGuerreros();
-		int tamanno = guerreros.size();
-		for(int i = 0; i < tamanno; i++) {
-			System.out.println(i + 1 + ": " + guerreros.get(i) + "\n");
-		}
-	}
-	
-	private static void seleccionarGuerrero() throws IOException {
-		listarGuerreros();
-		int guerrero1;
-		int guerrero2;
-		
-		System.out.println("--JUGADOR 1--");
-		System.out.println("Seleccione un guerrero: ");
-		guerrero1 = Integer.parseInt(br.readLine());
-		
-		System.out.println("--JUGADOR 2--");
-		System.out.println("Seleccione un guerrero: ");
-		guerrero2 = Integer.parseInt(br.readLine());
-	}
 	
 }
