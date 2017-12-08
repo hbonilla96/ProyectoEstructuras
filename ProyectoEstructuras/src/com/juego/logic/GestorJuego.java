@@ -1,5 +1,9 @@
 package com.juego.logic;
 
+import java.util.ArrayList;
+import com.juego.clases.Guerrero;
+import java.util.EnumSet;
+
 import com.juego.clases.Personaje;
 import com.juego.estructuras.ListaJugadores;
 import com.juego.estructuras.Nodo;
@@ -22,4 +26,16 @@ public class GestorJuego {
 	public void elegirArmas() {
 		
 	}
+	
+	public static ArrayList<Guerrero> listarGuerreros() {
+		EnumSet<Guerrero> todo = EnumSet.allOf( Guerrero.class);
+		ArrayList<Guerrero> lista = new ArrayList<>( todo.size());
+		
+		for( Guerrero s : todo) {
+			lista.add( s);
+		}
+		
+		return lista;
+	}
 }
+

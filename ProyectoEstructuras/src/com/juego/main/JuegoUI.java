@@ -1,10 +1,13 @@
 package com.juego.main;
 
 import java.io.BufferedReader;
+
+import com.juego.clases.Guerrero;
 import com.juego.logic.GestorJuego;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class JuegoUI {
 	private static final int contJugadores = 2;
@@ -62,5 +65,27 @@ public class JuegoUI {
 			handler.crearJugador(nombre);
 			}
 		}
+	
+	private static void listarGuerreros() {
+		ArrayList<Guerrero> guerreros= GestorJuego.listarGuerreros();
+		int tamanno = guerreros.size();
+		for(int i = 0; i < tamanno; i++) {
+			System.out.println(i + 1 + ": " + guerreros.get(i) + "\n");
+		}
+	}
+	
+	private static void seleccionarGuerrero() throws IOException {
+		listarGuerreros();
+		int guerrero1;
+		int guerrero2;
+		
+		System.out.println("--JUGADOR 1--");
+		System.out.println("Seleccione un guerrero: ");
+		guerrero1 = Integer.parseInt(br.readLine());
+		
+		System.out.println("--JUGADOR 2--");
+		System.out.println("Seleccione un guerrero: ");
+		guerrero2 = Integer.parseInt(br.readLine());
+	}
 	
 }
