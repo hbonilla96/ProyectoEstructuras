@@ -1,4 +1,6 @@
-package com.juego.clases;
+package com.juego.armas;
+
+import com.juego.clases.CategoriaArma;
 
 public class Gancho extends Arma{
 

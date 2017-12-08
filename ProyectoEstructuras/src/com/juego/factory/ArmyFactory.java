@@ -1,11 +1,11 @@
 package com.juego.factory;
 
-import com.juego.clases.Arma;
-import com.juego.clases.Bomba;
-import com.juego.clases.CannonPlasma;
+import com.juego.armas.Arma;
+import com.juego.armas.Bomba;
+import com.juego.armas.CannonPlasma;
+import com.juego.armas.Espada;
+import com.juego.armas.Gancho;
 import com.juego.clases.CategoriaArma;
-import com.juego.clases.Espada;
-import com.juego.clases.Gancho;
 import com.juego.clases.LlaveEspada;
 
 public class ArmyFactory {
